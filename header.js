@@ -6,24 +6,27 @@ class Header {
     }
 
     search(target,array){
-        const value = new RegExp(`${target.value.trim()}`,'igm');
+        const value = new RegExp(`${target.value.trim()}`,'i');
         const div = document.querySelector('.inputWrapper').children[1];
         let html = '';
 
         array.forEach((item)=>{
             for(let key in item){
-               if(value.test(item[key])){
-                    if(key == 'fullName' || key == 'fullName'){
+               if(!value.test(' ')){
+                    if(value.test(item[key])){
+                    if(key == 'fullName'){
                         html += `<a href="#/compositions/${item.name}">${item.fullName}</a>`;
                     }
                     if(key == 'compositionsList'){
-                        item.compositionsList.forEach(elem=>{
+                        item.compositionsList.forEach((elem,index)=>{
                             if(value.test(elem)){
-                                html += `<a href="#/compositions/${item.compositionsList[0]}">${item.fullName} ${elem[1]}</a>`;
+                                if(index>0){
+                                    html += `<a href="#/compositions/${item.compositionsList[0]}">${item.fullName} ${elem[1]}</a>`;
+                                }
                             }
                         })
                     }
-               }
+               }}
             }
         })
         setTimeout(()=>{
@@ -41,14 +44,11 @@ class Header {
     contentMenu(){
         return new Promise(resolve=>{
             const hash = location.hash.split('/')[1];
-            if(hash === 'compositors'){
+            if(hash === 'compositors' || hash === 'compositions' || hash === undefined){
                 resolve(this.createMenuList(this.alpabet))
             }
             if(hash === 'artist'){
                 resolve(`<div class="menu_item">Исполнители</div>`)
-            }
-            if(hash === 'compositions'){
-                resolve(this.createMenuList(this.alpabet))
             }
             if(hash === 'epoch'){
                 resolve(`<div class="menu_item">Эпохи</div>`)
@@ -66,13 +66,12 @@ class Header {
             // <a class="nav__main_item" href="#/artist">Исполнители</a>
             resolve(`
                 <header class="header">
-                    <p class="nav__logo">LOGO</p>
+                    <img class="nav__logo" src="/source/image/logo.png" alt="logo">
+                    <div class="inputWrapper"><input class="nav__main_input" type="text" placeholder="Поиск..."><div></div></div>
                     <nav class='nav__main'>
                         <a class="nav__main_item" href="#/compositors">Композиторы</a>
                         
                         <a class="nav__main_item" href="#/compositions">Произведения</a>
-                        
-                        <div class="inputWrapper"><input class="nav__main_input" type="text"><div></div></div>
                     </nav>
                 </header>
                 <nav class="menu">
@@ -84,6 +83,7 @@ class Header {
     afterRender(){
         return new Promise(resolve=>{
             const menu = document.getElementsByClassName('menu')[0],
+            inputWrapper = document.querySelector('.inputWrapper').children,
             navMenu = document.querySelectorAll('.nav__main_item');
             
             navMenu.forEach(item=>{
@@ -130,7 +130,7 @@ class Header {
                         item.childNodes.forEach((node,index)=>{
                             if(index > 0){
                                 item.addEventListener('mouseover',(e)=>{
-                                    node.classList.remove('hide');           
+                                    node.classList.remove('hide');
                                 })
                                 item.addEventListener('mouseout',(e)=>{
                                     node.classList.add('hide');
@@ -164,8 +164,13 @@ class Header {
                 })
             })
 
-            document.getElementsByClassName('nav__main_input')[0].addEventListener('keyup',(e)=>{
+            inputWrapper[0].addEventListener('keyup',(e)=>{
                 this.search(e.currentTarget,data)
+                if(inputWrapper[0].value.trim() == ''){
+                    inputWrapper[1].style.top = '-300px';
+                } else if(inputWrapper[1].children.length > 0) {
+                    inputWrapper[1].style.top = '70px';
+                }
             })
         })
     }
