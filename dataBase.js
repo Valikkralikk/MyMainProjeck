@@ -1,7 +1,7 @@
 const dataBase = [
     {
         name:'Мусоргский',
-        fullName:'Мусоргский Модест Петрович',
+        fullName:'Мусоргский</br> Модест Петрович',
         date:'(1839-1881)',
         image:'./source/image/musirgski.jpg',
         opera:[
@@ -77,7 +77,7 @@ const dataBase = [
     },
     {
         name:'Римский-Корсаков',
-        fullName:'Римский-Корсаков Николай Андреевич',
+        fullName:'Римский-Корсаков</br> Николай Андреевич',
         image:'./source/image/korsakov.jpg',
         date:'(1844-1908)',
         camer:[
@@ -100,7 +100,7 @@ const dataBase = [
     },
     {
         name:'Глинка',
-        fullName:'Глинка Михаил Иванович',
+        fullName:'Глинка</br> Михаил Иванович',
         date:'(1804-1857)',
         image:'./source/image/glinka.jpg',
         opera:[
@@ -140,7 +140,7 @@ const dataBase = [
     },
     {
         name:'Чайковский',
-        fullName:'Чайковский Пётр Ильич',
+        fullName:'Чайковский</br> Пётр Ильич',
         date:' (1840-1893)',
         image:'./source/image/chaikovsky.jpg',
         cont:[
