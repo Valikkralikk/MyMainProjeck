@@ -9,7 +9,7 @@ class CompositionsList{
         const list = array[type].map(item=>{
             const notes = item.notes.map(note=>{
                 return `<div><p>${note[0]}</p><div><a href="${note[1]}" download>Скачать</a><a href="${note[1]}" target="_blank">Открыть</a>
-                ${(note[2] === true)?'<audio src="https://sefon.pro/mp3/472422-sultan-laguchev-gorkij-vkus/"></audio><span>play</span></div>':'</div>'}</p></div>`
+                ${(note[2] === true)?'<audio src="https://getfile.dokpub.com/yandex/get/'+note[3]+'"></audio><span>play</span></div>':'</div>'}</div>`
             }).join('')
             return `<h3>${item.name}</h3><div class="hide list">${notes}</div>`
         }).join('')
