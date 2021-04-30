@@ -5,11 +5,11 @@ const dataBase = [
         date:'(1839-1881)',
         image:'./source/image/musirgski.jpg',
         opera:[
-            {
+            { 
                 name:'Борис Годунов',
                 date:'1874',
                 notes:[
-                    ['Борис Годунов Клавир','https://disk.yandex.by/i/QEo1nQ4qUOrEQA',false,'address'],
+                    ['Борис Годунов Клавир','https://disk.yandex.by/i/QEo1nQ4qUOrEQA',true,'../../source/audio/example.mp3'],
                     ['Борис Годунов Клавир 1896г','https://disk.yandex.by/i/zftuydF7lwfp6g',false,'address'],
                     ['Монолог Бориса Скорбит душа','https://disk.yandex.by/i/f1VKSrH_IJ85vA',false,'address'],
                     ['Монолог Марины','https://disk.yandex.by/i/pfOuPsS1_jDHaQ',false,'address'],

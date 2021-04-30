@@ -5,11 +5,38 @@ class CompositionsList{
         this.hash = decodeURI(location.hash).split('/');
     }
 
+    playMusic(index,audio,duration,button){
+        duration[index].max = audio[index].duration;
+        let id;
+        if(button[index].classList.contains('fa-play-circle')){
+            audio[index].play();
+            id = setInterval(()=>{
+                duration[index].value = audio[index].currentTime;
+                if(audio[index].currentTime === audio[index].duration){
+                    button[index].classList.value = 'far fa-play-circle i';
+                    clearInterval(id);
+                    audio[index].pause();
+                    duration[index].value = 0;
+                }
+            },500);
+            button[index].classList.value = 'fas fa-pause-circle i';
+            return id;
+        } else if(button[index].classList.contains('fa-pause-circle')){
+            clearInterval(id);
+            audio[index].pause();
+            button[index].classList.value = 'far fa-play-circle i';
+        }
+    }
+
+    changeDuration(i,duration,audio){
+        audio[i].currentTime = duration[i].value;
+    }
+
     typeList(array,type){
         const list = array[type].map(item=>{
             const notes = item.notes.map(note=>{
                 return `<div><p>${note[0]}</p><div><a href="${note[1]}" download>Скачать</a><a href="${note[1]}" target="_blank">Открыть</a>
-                ${(note[2] === true)?'<audio src="https://getfile.dokpub.com/yandex/get/'+note[3]+'"></audio><span>play</span></div>':'</div>'}</div>`
+                ${(note[2] === true)?'<audio class="audio" src="'+note[3]+'"></audio><i class="far fa-play-circle i"></i><input type="range" name="duration" class="duration"></div>':'</div>'}</div>`
             }).join('')
             return `<h3>${item.name}</h3><div class="hide list">${notes}</div>`
         }).join('')
@@ -47,7 +74,21 @@ class CompositionsList{
     }
 
     afterRender(){
-        const menuList = document.querySelectorAll('.content>.menuList');
+        const menuList = document.querySelectorAll('.content>.menuList'),
+            audio = document.querySelectorAll('.audio'),
+            duration = document.querySelectorAll('.duration'),
+            playButton = document.querySelectorAll('.i');
+
+        playButton.forEach((elem,index)=>{
+            elem.addEventListener('click',()=>{this.playMusic(index,audio,duration,playButton)})
+        })
+
+        duration.forEach((elem,i)=>{
+            elem.addEventListener('change',()=>{
+                this.changeDuration(i,duration,audio);
+            })
+        })
+        
 
         menuList.forEach(menu=>{
             menu.querySelectorAll('h2').forEach(h2=>{
