@@ -1,4 +1,4 @@
-import data from './dataBase.js';
+import data from '../data/dataBase.js';
 
 class Header {
     constructor(){

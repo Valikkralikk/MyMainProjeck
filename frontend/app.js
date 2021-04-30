@@ -1,8 +1,7 @@
-import Header from './Header.js';
-import CompositionsList from './CompositionsList.js';
-import Compositors from './Compositors.js';
-import MainPage from './MainPage.js';
-import Footer from './Footer.js';
+import Header from './view/header.js';
+import CompositionsList from './view/CompositionsList.js';
+import Compositors from './view/Compositors.js';
+import Footer from './view/Footer.js';
 
 const header = document.getElementById('content-header'),
       content = document.getElementById('content-body'),
