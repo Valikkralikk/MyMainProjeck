@@ -123,6 +123,44 @@ const dataBase = [
         fullName:'Глинка</br> Михаил Иванович',
         date:'(1804-1857)',
         image:'./source/image/glinka.jpg',
+        opera:[
+            {
+                name:'Иван Сусанин',
+                date:'1836',
+                notes:[
+                    ['Клавир действие 1','https://disk.yandex.by/i/uFDw91DDtzSaLA',false,'address'],
+                    ['Клавир действие 2','https://disk.yandex.by/i/aSXr37Re3zJIIA',false,'address'],
+                    ['Клавир действие 3','https://disk.yandex.by/i/PyaMP1pq-EljIg',false,'address'],
+                    ['Клавир действие 4','https://disk.yandex.by/i/q-kAUhRn8JBjrA',false,'address'],
+                    ['Ария Вани','https://disk.yandex.by/i/3wbzMkWcYkoPow',false,'address'],
+                    ['Ария Сусанина','https://disk.yandex.by/i/2ZQKKdgzB_mBuQ',false,'address'],
+                    ['Каватина и рондо Антониды','https://disk.yandex.by/i/gEN9SnBGJmSVOQ',false,'address'],
+                ],
+            },
+            {
+                name:'Руслан и Людмила',
+                date:'1842',
+                notes:[
+                    ['Клавир','https://disk.yandex.by/d/g6z-A9IfYWqpiw?w=1',false,'address'],
+                    ['2 песня Баяна','https://disk.yandex.by/i/UyX5CKxooI9ImA',false,'address'],
+                    ['Ария Ратмира','https://disk.yandex.by/i/vidkfGa_IKSsuQ',false,'address'],
+                    ['Ария Руслана и рондо Фарлафа','https://disk.yandex.by/i/MNUg1v-UTaDoIg',false,'address'],
+                    ['Каватина Людмилы','https://disk.yandex.by/i/gpoFrgPe56IYBA',false,'address'],
+                ],
+            },
+        ],
+        camer:[
+            {
+                name:'Сборник романсов',
+                date:'',
+                notes:[
+                    ['Глинка - Любимые народные песни','https://disk.yandex.by/i/05WYOz5Gr566vA',false,'address'],
+                    ['Глинка - Романсы и песни Том 1','https://disk.yandex.by/i/7eit7mDMkhPqig',false,'address'],
+                    ['Глинка - Романсы песни танцы','https://disk.yandex.by/i/_EXY9TPqW0wUFg',false,'address'],
+                    ['Глинка - Скажи зачем','https://disk.yandex.by/i/QKZk4YqMGkk0Vg',false,'address'],
+                ],
+            },
+        ]
         
     },
     {
