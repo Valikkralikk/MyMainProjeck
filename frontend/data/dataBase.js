@@ -123,14 +123,111 @@ const dataBase = [
         fullName:'Глинка</br> Михаил Иванович',
         date:'(1804-1857)',
         image:'./source/image/glinka.jpg',
-        
+        opera:[
+            {
+                name:'Иван Сусанин',
+                date:'1836',
+                notes:[
+                    ['Клавир действие 1','https://disk.yandex.by/i/uFDw91DDtzSaLA',false,'address'],
+                    ['Клавир действие 2','https://disk.yandex.by/i/aSXr37Re3zJIIA',false,'address'],
+                    ['Клавир действие 3','https://disk.yandex.by/i/PyaMP1pq-EljIg',false,'address'],
+                    ['Клавир действие 4','https://disk.yandex.by/i/q-kAUhRn8JBjrA',false,'address'],
+                    ['Ария Вани','https://disk.yandex.by/i/3wbzMkWcYkoPow',false,'address'],
+                    ['Ария Сусанина','https://disk.yandex.by/i/2ZQKKdgzB_mBuQ',false,'address'],
+                    ['Каватина и рондо Антониды','https://disk.yandex.by/i/gEN9SnBGJmSVOQ',false,'address'],
+                ],
+            },
+            {
+                name:'Руслан и Людмила',
+                date:'1842',
+                notes:[
+                    ['Клавир','https://disk.yandex.by/d/g6z-A9IfYWqpiw?w=1',false,'address'],
+                    ['2 песня Баяна','https://disk.yandex.by/i/UyX5CKxooI9ImA',false,'address'],
+                    ['Ария Ратмира','https://disk.yandex.by/i/vidkfGa_IKSsuQ',false,'address'],
+                    ['Ария Руслана и рондо Фарлафа','https://disk.yandex.by/i/MNUg1v-UTaDoIg',false,'address'],
+                    ['Каватина Людмилы','https://disk.yandex.by/i/gpoFrgPe56IYBA',false,'address'],
+                ],
+            },
+        ],
+        camer:[
+            {
+                name:'Сборник романсов',
+                date:'',
+                notes:[
+                    ['Глинка - Любимые народные песни','https://disk.yandex.by/i/05WYOz5Gr566vA',false,'address'],
+                    ['Глинка - Романсы и песни Том 1','https://disk.yandex.by/i/7eit7mDMkhPqig',false,'address'],
+                    ['Глинка - Романсы песни танцы','https://disk.yandex.by/i/_EXY9TPqW0wUFg',false,'address'],
+                    ['Глинка - Скажи зачем','https://disk.yandex.by/i/QKZk4YqMGkk0Vg',false,'address'],
+                ],
+            },
+        ]
     },
     {
         name:'Чайковский',
         fullName:'Чайковский</br> Пётр Ильич',
         date:' (1840-1893)',
         image:'./source/image/chaikovsky.jpg',
-        
+        opera:[
+            {
+                name:'Евгений Онегин',
+                date:'1836',
+                notes:[
+                    ['Ариозо Ленского  Я люблю вас ','https://disk.yandex.ru/i/h_na3d4kAI7M6w',false,'address'],
+                    ['Ариозо Ленского Куда ','https://disk.yandex.ru/i/CCHKyKggl-2-eA',false,'address'],
+                    ['Ариозо Онегина уже ль та самая Татьяна ','https://disk.yandex.ru/i/VHeTpC0rrV5gYQ',false,'address'],
+                    ['Ария Гремина','https://disk.yandex.ru/i/RWlgdAo8_6OsxQ',false,'address'],
+                    ['Сцена письма Татьяны Онегину','https://disk.yandex.ru/i/1yaZHuDgeeFkLw',false,'address'],
+                    ['Чайковский - Дуэт Татьяны и Ольги','https://disk.yandex.ru/i/zDgZGJiUQc-mLw',false,'address'],
+                    ['Клавир','https://disk.yandex.ru/i/b3Dv1_xsZhEzlg',false,'address'],
+                ],
+            },
+            {
+                name:'Иоланта',
+                date:'1842',
+                notes:[
+                    ['Ариозо Иоланты','https://disk.yandex.ru/i/mJaPf_FpB_eIYA',false,'address'],
+                    ['Клавир','https://disk.yandex.ru/i/A5oxi1joVDqHTQ',false,'address'],
+                    ['Кто здесь','https://disk.yandex.ru/i/e3b1UXs6tTex9g',false,'address'],
+                ],
+            },
+            {
+                name:'Пиковая дамма',
+                date:'1842',
+                notes:[
+                    ['Клавир','https://disk.yandex.ru/i/B6OqO-njhlalaw',false,'address'],
+                    ['Ария Германа Что наша жизнь ','https://disk.yandex.ru/i/qg3dTncOSwrrVg',false,'address'],
+                    ['Ария Елецкого ','https://disk.yandex.ru/i/Ud-6X3hkRK5-VA',false,'address'],
+                    ['Ария германа H moll','https://disk.yandex.ru/i/oYwNfFpvjd92hQ',false,'address'],
+                    ['Баллад Томского','https://disk.yandex.ru/i/QQmEttc129hsOA',false,'address'],
+                    ['ариозо германа я имени её не знаю','https://disk.yandex.ru/i/7lJiA2v1kBW2Cg',false,'address'],
+                    ['ариозо ерманан прости ,небесное созданье ','https://disk.yandex.ru/i/fcHlPU91_LYrbw',false,'address'],
+                ],
+            },
+        ],
+        camer:[
+            {
+                name:'Сборник романсов',
+                date:'',
+                notes:[
+                    ['Чайковский - Избранные романсы 1975','https://disk.yandex.ru/i/b-kN8gvgkl0_Lg',false,'address'],
+                    ['Чайковский - Избранные романсы 1977','https://disk.yandex.ru/i/yOjBQgpTgdRPFw',false,'address'],
+                    ['Чайковский - Избранные романсы 1980','https://disk.yandex.ru/i/uPEhwC4LFUZixg',false,'address'],
+                    ['Чайковский - Избранные романсы 1981','https://disk.yandex.ru/i/IeKYAe8if6bpMw',false,'address'],
+                    ['Чайковский - Романсы 1','https://disk.yandex.ru/i/LDJrYB81_08NqQ',false,'address'],
+                    ['Чайковский - Романсы 2','https://disk.yandex.ru/i/KRFqUXJeybgBpg',false,'address'],
+                    ['Чайковский - Романсы 3','https://disk.yandex.ru/i/MIu7hCTMPxdD6Q',false,'address'],
+                ],
+            },
+        ],
+        cont:[
+            {
+                name:'Сборник',
+                date:'',
+                notes:[
+                    ['Контата Москва','https://disk.yandex.ru/i/Clb4vgunpoyC3A',false,'address'],
+                ],
+            },
+        ]
     },
 ]
 
