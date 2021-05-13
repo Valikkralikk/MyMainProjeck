@@ -9,7 +9,7 @@ const dataBase = [
                 name:'Борис Годунов',
                 date:'1874',
                 notes:[
-                    ['Борис Годунов Клавир','https://disk.yandex.by/i/QEo1nQ4qUOrEQA',true,'../../source/audio/example.mp3'],
+                    ['Борис Годунов Клавир','https://disk.yandex.by/i/QEo1nQ4qUOrEQA',true,'../../source/audio/music.mp3'],
                     ['Борис Годунов Клавир 1896г','https://disk.yandex.by/i/zftuydF7lwfp6g',false,'address'],
                     ['Монолог Бориса Скорбит душа','https://disk.yandex.by/i/f1VKSrH_IJ85vA',false,'address'],
                     ['Монолог Марины','https://disk.yandex.by/i/pfOuPsS1_jDHaQ',false,'address'],
@@ -161,14 +161,77 @@ const dataBase = [
                 ],
             },
         ]
+<<<<<<< HEAD
         
+=======
+>>>>>>> main
     },
     {
         name:'Чайковский',
         fullName:'Чайковский</br> Пётр Ильич',
         date:' (1840-1893)',
         image:'./source/image/chaikovsky.jpg',
-        
+        opera:[
+            {
+                name:'Евгений Онегин',
+                date:'1836',
+                notes:[
+                    ['Ариозо Ленского  Я люблю вас ','https://disk.yandex.ru/i/h_na3d4kAI7M6w',false,'address'],
+                    ['Ариозо Ленского Куда ','https://disk.yandex.ru/i/CCHKyKggl-2-eA',false,'address'],
+                    ['Ариозо Онегина уже ль та самая Татьяна ','https://disk.yandex.ru/i/VHeTpC0rrV5gYQ',false,'address'],
+                    ['Ария Гремина','https://disk.yandex.ru/i/RWlgdAo8_6OsxQ',false,'address'],
+                    ['Сцена письма Татьяны Онегину','https://disk.yandex.ru/i/1yaZHuDgeeFkLw',false,'address'],
+                    ['Чайковский - Дуэт Татьяны и Ольги','https://disk.yandex.ru/i/zDgZGJiUQc-mLw',false,'address'],
+                    ['Клавир','https://disk.yandex.ru/i/b3Dv1_xsZhEzlg',false,'address'],
+                ],
+            },
+            {
+                name:'Иоланта',
+                date:'1842',
+                notes:[
+                    ['Ариозо Иоланты','https://disk.yandex.ru/i/mJaPf_FpB_eIYA',false,'address'],
+                    ['Клавир','https://disk.yandex.ru/i/A5oxi1joVDqHTQ',false,'address'],
+                    ['Кто здесь','https://disk.yandex.ru/i/e3b1UXs6tTex9g',false,'address'],
+                ],
+            },
+            {
+                name:'Пиковая дамма',
+                date:'1842',
+                notes:[
+                    ['Клавир','https://disk.yandex.ru/i/B6OqO-njhlalaw',false,'address'],
+                    ['Ария Германа Что наша жизнь ','https://disk.yandex.ru/i/qg3dTncOSwrrVg',false,'address'],
+                    ['Ария Елецкого ','https://disk.yandex.ru/i/Ud-6X3hkRK5-VA',false,'address'],
+                    ['Ария германа H moll','https://disk.yandex.ru/i/oYwNfFpvjd92hQ',false,'address'],
+                    ['Баллад Томского','https://disk.yandex.ru/i/QQmEttc129hsOA',false,'address'],
+                    ['ариозо германа я имени её не знаю','https://disk.yandex.ru/i/7lJiA2v1kBW2Cg',false,'address'],
+                    ['ариозо ерманан прости ,небесное созданье ','https://disk.yandex.ru/i/fcHlPU91_LYrbw',false,'address'],
+                ],
+            },
+        ],
+        camer:[
+            {
+                name:'Сборник романсов',
+                date:'',
+                notes:[
+                    ['Чайковский - Избранные романсы 1975','https://disk.yandex.ru/i/b-kN8gvgkl0_Lg',false,'address'],
+                    ['Чайковский - Избранные романсы 1977','https://disk.yandex.ru/i/yOjBQgpTgdRPFw',false,'address'],
+                    ['Чайковский - Избранные романсы 1980','https://disk.yandex.ru/i/uPEhwC4LFUZixg',false,'address'],
+                    ['Чайковский - Избранные романсы 1981','https://disk.yandex.ru/i/IeKYAe8if6bpMw',false,'address'],
+                    ['Чайковский - Романсы 1','https://disk.yandex.ru/i/LDJrYB81_08NqQ',false,'address'],
+                    ['Чайковский - Романсы 2','https://disk.yandex.ru/i/KRFqUXJeybgBpg',false,'address'],
+                    ['Чайковский - Романсы 3','https://disk.yandex.ru/i/MIu7hCTMPxdD6Q',false,'address'],
+                ],
+            },
+        ],
+        cont:[
+            {
+                name:'Сборник',
+                date:'',
+                notes:[
+                    ['Контата Москва','https://disk.yandex.ru/i/Clb4vgunpoyC3A',false,'address'],
+                ],
+            },
+        ]
     },
 ]
 

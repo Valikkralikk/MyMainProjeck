@@ -3,26 +3,25 @@ import data from '../data/dataBase.js';
 class CompositionsList{
     constructor(){
         this.hash = decodeURI(location.hash).split('/');
+        this.id = '';
     }
 
     playMusic(index,audio,duration,button){
         duration[index].max = audio[index].duration;
-        let id;
         if(button[index].classList.contains('fa-play-circle')){
             audio[index].play();
-            id = setInterval(()=>{
+            this.id = setInterval(()=>{
                 duration[index].value = audio[index].currentTime;
                 if(audio[index].currentTime === audio[index].duration){
                     button[index].classList.value = 'far fa-play-circle i';
-                    clearInterval(id);
+                    clearInterval(this.id);
                     audio[index].pause();
                     duration[index].value = 0;
                 }
             },500);
             button[index].classList.value = 'fas fa-pause-circle i';
-            return id;
         } else if(button[index].classList.contains('fa-pause-circle')){
-            clearInterval(id);
+            clearInterval(this.id);
             audio[index].pause();
             button[index].classList.value = 'far fa-play-circle i';
         }
