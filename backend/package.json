@@ -1,0 +1,24 @@
+{
+  "name": "noteforvocal",
+  "version": "1.0.0",
+  "description": "server backend node express",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./server.js localhost 3000"
+  },
+  "keywords": [
+    "server",
+    "backend",
+    "node",
+    "express"
+  ],
+  "author": "Valentin Lobanov",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
