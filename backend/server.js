@@ -1,6 +1,7 @@
 const express = require ('express'),
       path = require('path'),
       fs = require("fs"),
+      Compositors = require('./module/Compositors.js'),
       app = express();
 
 let dataBase = JSON.parse(fs.readFileSync('./data/dataBase.json'))
@@ -31,8 +32,27 @@ compositionsList(dataBase);
 
 
 app.get('/', function (req, res) {
-        res.send(JSON.stringify(dataBase))
+        const compositiors = new Compositors();
+        compositiors.render().then(html=>{
+            res.writeHead(200, {
+                'Content-Type': 'text/html; charset=utf-8',
+                'Access-Control-Allow-Origin': '*',
+                });
+            res.end(html);
+        })
     });
+
+app.get('/source/image/*.jpg', function (req, res) {
+        let path = 'C:/Users/Valikkralikk/Desktop/Реп. Frontend/JS/MyMainProjeck/backend/' + req.url;
+        res.sendFile(path)
+    });
+
+app.get('/source/css/style.less', function (req, res) {
+        let path = 'C:/Users/Valikkralikk/Desktop/Реп. Frontend/JS/MyMainProjeck/backend/' + req.url;
+        res.sendFile(path)
+    });
+
+
     
-app.listen(3001)
+app.listen(process.env.PORT || 3001)
 

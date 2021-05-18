@@ -32,7 +32,7 @@ function router(){
 
     contentHTML.render().then(html=>{
         content.innerHTML = html;
-        contentHTML.afterRender();    
+        contentHTML.afterRender();
     });
 }
 
