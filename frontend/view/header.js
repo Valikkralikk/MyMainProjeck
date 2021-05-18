@@ -66,7 +66,7 @@ class Header {
             // <a class="nav__main_item" href="#/artist">Исполнители</a>
             resolve(`
                 <header class="header">
-                    <img class="nav__logo" src="/source/image/logo.png" alt="logo">
+                    <img class="nav__logo" src="../../backend/source/image/logo.png" alt="logo">
                     <div class="inputWrapper"><input class="nav__main_input" type="text" placeholder="Поиск..."><div></div></div>
                     <nav class='nav__main'>
                         <a class="nav__main_item" href="#/compositors">Композиторы</a>

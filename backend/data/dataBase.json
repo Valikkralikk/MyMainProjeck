@@ -3,7 +3,7 @@
        "name": "Мусоргский",
        "fullName": "Мусоргский<\/br> Модест Петрович",
        "date": "(1839-1881)",
-       "image": "./source/image/musirgski.jpg",
+       "image": "../../backend/source/image/musirgski.jpg",
        "opera": [
           {
              "name": "Борис Годунов",
@@ -198,7 +198,7 @@
     {
        "name": "Римский-Корсаков",
        "fullName": "Римский-Корсаков<\/br> Николай Андреевич",
-       "image": "./source/image/korsakov.jpg",
+       "image": "../../backend/source/image/korsakov.jpg",
        "date": "(1844-1908)",
        "opera": [
           {
@@ -317,7 +317,7 @@
        "name": "Глинка",
        "fullName": "Глинка<\/br> Михаил Иванович",
        "date": "(1804-1857)",
-       "image": "./source/image/glinka.jpg",
+       "image": "../../backend/source/image/glinka.jpg",
        "opera": [
           {
              "name": "Иван Сусанин",
@@ -441,7 +441,7 @@
        "name": "Чайковский",
        "fullName": "Чайковский<\/br> Пётр Ильич",
        "date": " (1840-1893)",
-       "image": "./source/image/chaikovsky.jpg",
+       "image": "../../backend/source/image/chaikovsky.jpg",
        "opera": [
           {
              "name": "Евгений Онегин",

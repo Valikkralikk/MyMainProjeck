@@ -13,7 +13,7 @@ body {
     width: 100vw;
     max-height: 100vh;
     overflow: hidden;
-    background:url('/source/image/back.jpg') no-repeat;
+    background:url('../../backend/source/image/back.jpg') no-repeat;
     background-size: cover;
     background-position: top center;
     display: flex;
@@ -285,11 +285,12 @@ body {
         &>div{
             background-color: #dbffce;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             border-bottom: 1px solid #000;
-    
-            &>p{
-                width: 35%;
+
+            &>div{
+                display: flex;
+                flex-direction: column;
             }
         }
     
@@ -409,7 +410,7 @@ body {
     }
 
     .menuList .list {
-        font-size: 14px;
+        font-size: 18px;
     }
 }
 
