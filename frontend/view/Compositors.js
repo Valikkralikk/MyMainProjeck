@@ -2,6 +2,7 @@ import data from '../data/dataBase.js';
 import Components from '../controls/Components.js';
 
 class Compositiors extends Components{
+<<<<<<< HEAD
 
 
     // createCardsList(){
@@ -16,6 +17,8 @@ class Compositiors extends Components{
     //     });
     //     return list.join('')
     // }
+=======
+>>>>>>> main
 
     render(){
         return new Promise(resolve=>{

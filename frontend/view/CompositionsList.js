@@ -1,8 +1,10 @@
 import data from '../data/dataBase.js';
+import Components from '../controls/Components.js';
 
-class CompositionsList{
+class CompositionsList extends Components{
     constructor(){
-        this.hash = decodeURI(location.hash).split('/');
+        super();
+        this.hash = decodeURI(location.hashslice(1));
         this.id = '';
     }
 
@@ -31,6 +33,7 @@ class CompositionsList{
         audio[i].currentTime = duration[i].value;
     }
 
+<<<<<<< HEAD
     typeList(array,type){
         const list = array[type].map(item=>{
             const notes = item.notes.map(note=>{
@@ -56,53 +59,48 @@ class CompositionsList{
         }
         return `<div class='menuList'>${html}</div>`
     }
+=======
+>>>>>>> main
 
     render(){
         return new Promise(resolve=>{
-            if(this.hash[2]){
-                resolve(`<div class="content">${this.createCompositors(this.hash[2])}</div>`)
-            } else {
-            resolve(
-                `<div class='content'>
-                ${data.map(item=>{
-                    return `<div class='menuList'><h2 class="title">${item.fullName}</h2>${this.createCompositors(item.name)}</div>`
-                }).join('')}
-            </div>`)
-            }
+            this.sendRequest(this.hash).then(html=>{
+                return resolve(html)
+            })
         })
     }
 
-    afterRender(){
-        const menuList = document.querySelectorAll('.content>.menuList'),
-            audio = document.querySelectorAll('.audio'),
-            duration = document.querySelectorAll('.duration'),
-            playButton = document.querySelectorAll('.i');
+    // afterRender(){
+    //     const menuList = document.querySelectorAll('.content>.menuList'),
+    //         audio = document.querySelectorAll('.audio'),
+    //         duration = document.querySelectorAll('.duration'),
+    //         playButton = document.querySelectorAll('.i');
 
-        playButton.forEach((elem,index)=>{
-            elem.addEventListener('click',()=>{this.playMusic(index,audio,duration,playButton)})
-        })
+    //     playButton.forEach((elem,index)=>{
+    //         elem.addEventListener('click',()=>{this.playMusic(index,audio,duration,playButton)})
+    //     })
 
-        duration.forEach((elem,i)=>{
-            elem.addEventListener('change',()=>{
-                this.changeDuration(i,duration,audio);
-            })
-        })
+    //     duration.forEach((elem,i)=>{
+    //         elem.addEventListener('change',()=>{
+    //             this.changeDuration(i,duration,audio);
+    //         })
+    //     })
         
 
-        menuList.forEach(menu=>{
-            menu.querySelectorAll('h2').forEach(h2=>{
-                h2.addEventListener('click',()=>{
-                    h2.nextElementSibling.classList.toggle('hide')
-                })
-            })
-            menu.querySelectorAll('h3').forEach(h3=>{
-                h3.addEventListener('click',()=>{
-                    h3.nextElementSibling.classList.toggle('hide')
-                })
-            })
-        })
+    //     menuList.forEach(menu=>{
+    //         menu.querySelectorAll('h2').forEach(h2=>{
+    //             h2.addEventListener('click',()=>{
+    //                 h2.nextElementSibling.classList.toggle('hide')
+    //             })
+    //         })
+    //         menu.querySelectorAll('h3').forEach(h3=>{
+    //             h3.addEventListener('click',()=>{
+    //                 h3.nextElementSibling.classList.toggle('hide')
+    //             })
+    //         })
+    //     })
 
-    }
+    // }
 
 }
 
