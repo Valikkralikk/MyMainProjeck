@@ -1,11 +1,7 @@
 const express = require ('express'),
-    //   path = require('path'),
       fs = require("fs"),
       Compositors = require('./module/Compositors.js'),
-<<<<<<< HEAD
-=======
       CompositionsList = require('./module/CompositionsList.js'),
->>>>>>> main
       app = express();
 
 let dataBase = JSON.parse(fs.readFileSync('./data/dataBase.json'))
@@ -36,6 +32,7 @@ compositionsList(dataBase);
 
 
 app.get('/', function (req, res) {
+    console.log('Compositor')
         const compositiors = new Compositors();
         compositiors.render().then(html=>{
             res.writeHead(200, {
@@ -45,26 +42,9 @@ app.get('/', function (req, res) {
             res.end(html);
         })
     });
-<<<<<<< HEAD
-
-app.get('/source/image/*.jpg', function (req, res) {
-        let path = 'C:/Users/Valikkralikk/Desktop/Реп. Frontend/JS/MyMainProjeck/backend/' + req.url;
-        res.sendFile(path)
-    });
-
-app.get('/source/css/style.less', function (req, res) {
-        let path = 'C:/Users/Valikkralikk/Desktop/Реп. Frontend/JS/MyMainProjeck/backend/' + req.url;
-        res.sendFile(path)
-    });
-
-
-    
-app.listen(process.env.PORT || 3001)
-=======
->>>>>>> main
 
 app.get('/compositions',function (req,res) {
-    console.log(req.url)
+    console.log('compositions')
     const compositionsList = new CompositionsList(req.url);
     compositionsList.render().then(html=>{
         res.writeHead(200, {
@@ -76,12 +56,15 @@ app.get('/compositions',function (req,res) {
 })
 
 app.get('/compositions/:author',function (req,res) {
-    console.log(req.url)
-    res.writeHead(200, {
-        'Content-Type': 'text/html; charset=utf-8',
-        'Access-Control-Allow-Origin': '*',
-        });
-    res.end(`<h1>${req.params.author}</h1>`)
+    console.log('compositionsAuthor')
+    const compositionsList = new CompositionsList(decodeURI(req.url));
+    compositionsList.render().then(html=>{
+        res.writeHead(200, {
+            'Content-Type': 'text/html; charset=utf-8',
+            'Access-Control-Allow-Origin': '*',
+            });
+        res.end(html)
+    })
 })
 
 app.listen(3001,()=>{

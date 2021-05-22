@@ -22,6 +22,7 @@ function setContent(hash){
 
 
 function router(){
+    console.log('first')
     let contentHTML = setContent(location.hash.split('/')[1]);
 
     headerHTML.render().then(html=>{

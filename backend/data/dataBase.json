@@ -13,7 +13,7 @@
                    "Борис Годунов Клавир",
                    "https://disk.yandex.by/i/QEo1nQ4qUOrEQA",
                    true,
-                   "../../source/audio/music.mp3"
+                   "./backend/source/audio/music.mp3"
                 ],
                 [
                    "Борис Годунов Клавир 1896г",
