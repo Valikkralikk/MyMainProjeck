@@ -1,7 +1,8 @@
-import data from '../data/dataBase.js';
+import Components from '../controls/Components.js';
 
-class Header {
+class Header extends Components {
     constructor(){
+        super();
         this.alpabet = [...new Array(32)].map((item,i)=> { return String.fromCharCode(1072 + i).toUpperCase()});
     }
 
@@ -80,7 +81,7 @@ class Header {
         })
     }
 
-    afterRender(){
+    afterRender(data){
         return new Promise(resolve=>{
             const menu = document.getElementsByClassName('menu')[0],
             inputWrapper = document.querySelector('.inputWrapper').children,
@@ -165,7 +166,7 @@ class Header {
             })
 
             inputWrapper[0].addEventListener('keyup',(e)=>{
-                this.search(e.currentTarget,data)
+                this.search(e.currentTarget,data);
                 if(inputWrapper[0].value.trim() == ''){
                     inputWrapper[1].style.top = '-300px';
                 } else if(inputWrapper[1].children.length > 0) {

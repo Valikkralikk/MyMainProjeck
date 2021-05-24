@@ -22,12 +22,11 @@ function setContent(hash){
 
 
 function router(){
-    console.log('first')
     let contentHTML = setContent(location.hash.split('/')[1]);
 
     headerHTML.render().then(html=>{
         header.innerHTML = html;
-        headerHTML.afterRender().then(res=>res());
+        headerHTML.getData().then(data=>headerHTML.afterRender(data).then(res=>res()));
     });
     footerHTML.render().then(html=>footer.innerHTML = html);
 

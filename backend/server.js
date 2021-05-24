@@ -32,7 +32,6 @@ compositionsList(dataBase);
 
 
 app.get('/', function (req, res) {
-    console.log('Compositor')
         const compositiors = new Compositors();
         compositiors.render().then(html=>{
             res.writeHead(200, {
@@ -43,8 +42,17 @@ app.get('/', function (req, res) {
         })
     });
 
+app.get('/dataBase', function (req, res) {
+        return new Promise(resolve=>{
+            res.writeHead(200, {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                });
+            resolve(res.end(fs.readFileSync('./data/dataBase.json')))
+        })
+    });
+
 app.get('/compositions',function (req,res) {
-    console.log('compositions')
     const compositionsList = new CompositionsList(req.url);
     compositionsList.render().then(html=>{
         res.writeHead(200, {
@@ -56,7 +64,6 @@ app.get('/compositions',function (req,res) {
 })
 
 app.get('/compositions/:author',function (req,res) {
-    console.log('compositionsAuthor')
     const compositionsList = new CompositionsList(decodeURI(req.url));
     compositionsList.render().then(html=>{
         res.writeHead(200, {
